@@ -5,7 +5,7 @@ class BinaryHeap {
 	data: Array<number>
 	compare: Function
 
-	constructor(data: Array<number> = [], compare : Function = BinaryHeap.MaxCompare) {
+	constructor(data: Array<number>, compare : Function = BinaryHeap.MaxCompare) {
 		this.data  = data
 		this.compare = compare
 		this.heapify()
@@ -113,7 +113,7 @@ export class MaxHeap extends BinaryHeap {
 
 export class MinHeap extends BinaryHeap {
 	constructor(data: Array<number>) {
-		super(data, BinaryHeap.MaxCompare)
+		super(data, BinaryHeap.MinCompare)
 	}
 }
 
