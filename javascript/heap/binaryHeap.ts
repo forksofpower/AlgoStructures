@@ -18,7 +18,6 @@ class BinaryHeap {
 		return a - b
 	}
 
-
 	get size(): number {
 		return this.data.length
 	}
@@ -31,7 +30,7 @@ class BinaryHeap {
 	 * Show the value at the root of the heap
 	 * @return {Number}
 	 */
-	peek(): number | null {
+	get peek(): number | null {
 		if (this.size < 1) return null;
 		return this.data[0]
 	}
@@ -51,7 +50,7 @@ class BinaryHeap {
 
 	// alias of poll
 	pop(): number {
-		if (this.size === 0) return 0;
+		if (this.size === 0) return null;
 
 		const result = this.data[0]
 		const last = this.data.pop()
@@ -102,6 +101,10 @@ class BinaryHeap {
 				break;
 			}
 		}
+	}
+
+	clear() {
+		this.data.length = 0
 	}
 }
 
