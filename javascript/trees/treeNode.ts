@@ -1,3 +1,9 @@
+interface ITreeNode<T> {
+    val: T,
+    left: TreeNode<any> | null;
+    right: TreeNode<any> | null;
+}
+
 class TreeNode<T> {
     val: T;
     left: TreeNode<any> | null;
