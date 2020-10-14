@@ -1,9 +1,9 @@
-class TreeNode {
-    val: number;
-    left: TreeNode;
-    right: TreeNode;
+class TreeNode<T> {
+    val: T;
+    left: TreeNode<any> | null;
+    right: TreeNode<any> | null;
 
-    constructor(val, left=null, right=null) {
+    constructor(val: T, left=null, right=null) {
         this.val = val;
         this.left = left;
         this.right = right;
